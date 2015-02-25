@@ -17,7 +17,7 @@
       <tbody>
         <% @products.each do |product| %>
           <tr>
-              <td><%=product.name %> </td>
+              <td><%= link_to product.name, product_path(product) %> </td>
               <td>$<%=product.price.round(2) %></td>
               <td> <%= link_to product.company.name, company_path(product) %></td>
               <td> <%= link_to "Review a Product", new_product_product_review_path(product) %></td>
